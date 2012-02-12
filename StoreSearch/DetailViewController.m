@@ -21,6 +21,8 @@
 @property (nonatomic, weak) IBOutlet UILabel *priceLabel;
 @property (nonatomic, weak) IBOutlet UIButton *storeButton;
 @property (nonatomic, weak) IBOutlet UIView *backgroundView;
+@property (nonatomic, weak) IBOutlet UIButton *closeButton;
+
 - (IBAction)close:(id)sender;
 - (IBAction)openInStore:(id)sender;
 
@@ -37,6 +39,7 @@
 @synthesize storeButton = _storeButton;
 @synthesize backgroundView = _backgroundView;
 @synthesize searchResult = _searchResult;
+@synthesize closeButton = _closeButton;
 
 -(void) dealloc{
     [self.artworkImageView cancelImageRequestOperation];
@@ -45,10 +48,24 @@
 {
     [self didMoveToParentViewController:self.parentViewController];
 }
+- (void)layoutForInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    CGRect rect = self.closeButton.frame;
+    if (UIInterfaceOrientationIsPortrait(interfaceOrientation)) {
+        rect.origin = CGPointMake(28, 87);
+    } else {
+        rect.origin = CGPointMake(108, 7);
+    }
+    self.closeButton.frame = rect;
+}
+
 - (void)presentInParentViewController:(UIViewController *)parentViewController
 {
     gradientView = [[GradientView alloc] initWithFrame:parentViewController.view.bounds];
     [parentViewController.view addSubview:gradientView];
+    self.view.frame = parentViewController.view.bounds;
+    [self layoutForInterfaceOrientation:parentViewController.interfaceOrientation];
+
     [parentViewController.view addSubview:self.view];
     [parentViewController addChildViewController:self];
     
@@ -170,7 +187,11 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    return YES;
 }
-
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
+    [self layoutForInterfaceOrientation:toInterfaceOrientation];
+}
 @end

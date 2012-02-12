@@ -41,10 +41,9 @@
 						<array class="NSMutableArray" key="NSSubviews">
 							<object class="IBUILabel" id="826553712">
 								<reference key="NSNextResponder" ref="243354136"/>
-								<int key="NSvFlags">292</int>
+								<int key="NSvFlags">293</int>
 								<string key="NSFrame">{{100, 29}, {121, 21}}</string>
 								<reference key="NSSuperview" ref="243354136"/>
-								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:328</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
