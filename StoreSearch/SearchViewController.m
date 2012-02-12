@@ -8,6 +8,11 @@
 
 #import "SearchViewController.h"
 #import "SearchResult.h"
+#import "SearchResultCell.h"
+
+static NSString *const SearchResultCellIdentifier = @"SearchResultCell";
+static NSString *const NothingFoundCellIdentifier = @"NothingFoundCell";
+
 @interface SearchViewController()
 @property (nonatomic, weak) IBOutlet UISearchBar *searchBar;
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
@@ -30,6 +35,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    UINib *cellNib = [UINib nibWithNibName:SearchResultCellIdentifier bundle:nil];
+    [self.tableView registerNib:cellNib forCellReuseIdentifier:SearchResultCellIdentifier];
+    self.tableView.rowHeight = 80;
+    cellNib = [UINib nibWithNibName:NothingFoundCellIdentifier bundle:nil];
+    [self.tableView registerNib:cellNib forCellReuseIdentifier:NothingFoundCellIdentifier];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -97,23 +107,17 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"SearchResultCell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
-    }
-    
     if ([searchResults count] == 0) {
-        cell.textLabel.text = @"(Nothing found)";
-        cell.detailTextLabel.text = @"";
+        return [tableView dequeueReusableCellWithIdentifier:NothingFoundCellIdentifier];
     } else {
+        SearchResultCell *cell = (SearchResultCell *)[tableView dequeueReusableCellWithIdentifier:SearchResultCellIdentifier];
+        
         SearchResult *searchResult = [searchResults objectAtIndex:indexPath.row];
-        cell.textLabel.text = searchResult.name;
-        cell.detailTextLabel.text = searchResult.artistname;
+        cell.nameLabel.text = searchResult.name;
+        cell.artistNameLabel.text = searchResult.artistname;
+        
+        return cell;
     }
-    
-    return cell;
 }
 #pragma mark - UITableViewDelegate
 

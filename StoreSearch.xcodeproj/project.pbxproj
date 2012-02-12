@@ -16,6 +16,24 @@
 		7132C55514E753050009F1CB /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7132C55414E753050009F1CB /* SearchViewController.m */; };
 		7132C55814E753050009F1CB /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7132C55614E753050009F1CB /* SearchViewController.xib */; };
 		7132C56414E75D5E0009F1CB /* SearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 7132C56314E75D5E0009F1CB /* SearchResult.m */; };
+		7132C57614E7617D0009F1CB /* BarTexture.png in Resources */ = {isa = PBXBuildFile; fileRef = 7132C56714E7617D0009F1CB /* BarTexture.png */; };
+		7132C57714E7617D0009F1CB /* BarTexture@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7132C56814E7617D0009F1CB /* BarTexture@2x.png */; };
+		7132C57814E7617D0009F1CB /* CloseButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 7132C56914E7617D0009F1CB /* CloseButton.png */; };
+		7132C57914E7617D0009F1CB /* CloseButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7132C56A14E7617D0009F1CB /* CloseButton@2x.png */; };
+		7132C57A14E7617D0009F1CB /* DetailPlaceholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 7132C56B14E7617D0009F1CB /* DetailPlaceholder.png */; };
+		7132C57B14E7617D0009F1CB /* DetailPlaceholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7132C56C14E7617D0009F1CB /* DetailPlaceholder@2x.png */; };
+		7132C57C14E7617D0009F1CB /* LandscapeBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 7132C56D14E7617D0009F1CB /* LandscapeBackground.png */; };
+		7132C57D14E7617D0009F1CB /* LandscapeButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 7132C56E14E7617D0009F1CB /* LandscapeButton.png */; };
+		7132C57E14E7617D0009F1CB /* LandscapeButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7132C56F14E7617D0009F1CB /* LandscapeButton@2x.png */; };
+		7132C57F14E7617D0009F1CB /* Placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 7132C57014E7617D0009F1CB /* Placeholder.png */; };
+		7132C58014E7617D0009F1CB /* Placeholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7132C57114E7617D0009F1CB /* Placeholder@2x.png */; };
+		7132C58114E7617D0009F1CB /* SelectedTableCellGradient.png in Resources */ = {isa = PBXBuildFile; fileRef = 7132C57214E7617D0009F1CB /* SelectedTableCellGradient.png */; };
+		7132C58214E7617D0009F1CB /* StoreButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 7132C57314E7617D0009F1CB /* StoreButton.png */; };
+		7132C58314E7617D0009F1CB /* StoreButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7132C57414E7617D0009F1CB /* StoreButton@2x.png */; };
+		7132C58414E7617D0009F1CB /* TableCellGradient.png in Resources */ = {isa = PBXBuildFile; fileRef = 7132C57514E7617D0009F1CB /* TableCellGradient.png */; };
+		7132C58614E761A40009F1CB /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7132C58514E761A40009F1CB /* SearchResultCell.xib */; };
+		7132C58914E763860009F1CB /* SearchResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7132C58814E763860009F1CB /* SearchResultCell.m */; };
+		7132C58B14E766E10009F1CB /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7132C58A14E766E10009F1CB /* NothingFoundCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +52,25 @@
 		7132C55714E753050009F1CB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SearchViewController.xib; sourceTree = "<group>"; };
 		7132C56214E75D5E0009F1CB /* SearchResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResult.h; sourceTree = "<group>"; };
 		7132C56314E75D5E0009F1CB /* SearchResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResult.m; sourceTree = "<group>"; };
+		7132C56714E7617D0009F1CB /* BarTexture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BarTexture.png; sourceTree = "<group>"; };
+		7132C56814E7617D0009F1CB /* BarTexture@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BarTexture@2x.png"; sourceTree = "<group>"; };
+		7132C56914E7617D0009F1CB /* CloseButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseButton.png; sourceTree = "<group>"; };
+		7132C56A14E7617D0009F1CB /* CloseButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CloseButton@2x.png"; sourceTree = "<group>"; };
+		7132C56B14E7617D0009F1CB /* DetailPlaceholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DetailPlaceholder.png; sourceTree = "<group>"; };
+		7132C56C14E7617D0009F1CB /* DetailPlaceholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DetailPlaceholder@2x.png"; sourceTree = "<group>"; };
+		7132C56D14E7617D0009F1CB /* LandscapeBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LandscapeBackground.png; sourceTree = "<group>"; };
+		7132C56E14E7617D0009F1CB /* LandscapeButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LandscapeButton.png; sourceTree = "<group>"; };
+		7132C56F14E7617D0009F1CB /* LandscapeButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LandscapeButton@2x.png"; sourceTree = "<group>"; };
+		7132C57014E7617D0009F1CB /* Placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Placeholder.png; sourceTree = "<group>"; };
+		7132C57114E7617D0009F1CB /* Placeholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Placeholder@2x.png"; sourceTree = "<group>"; };
+		7132C57214E7617D0009F1CB /* SelectedTableCellGradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SelectedTableCellGradient.png; sourceTree = "<group>"; };
+		7132C57314E7617D0009F1CB /* StoreButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StoreButton.png; sourceTree = "<group>"; };
+		7132C57414E7617D0009F1CB /* StoreButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "StoreButton@2x.png"; sourceTree = "<group>"; };
+		7132C57514E7617D0009F1CB /* TableCellGradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TableCellGradient.png; sourceTree = "<group>"; };
+		7132C58514E761A40009F1CB /* SearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
+		7132C58714E763850009F1CB /* SearchResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultCell.h; sourceTree = "<group>"; };
+		7132C58814E763860009F1CB /* SearchResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultCell.m; sourceTree = "<group>"; };
+		7132C58A14E766E10009F1CB /* NothingFoundCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +117,7 @@
 		7132C54714E753040009F1CB /* StoreSearch */ = {
 			isa = PBXGroup;
 			children = (
+				7132C56614E7617D0009F1CB /* Images */,
 				7132C55014E753040009F1CB /* AppDelegate.h */,
 				7132C55114E753050009F1CB /* AppDelegate.m */,
 				7132C55314E753050009F1CB /* SearchViewController.h */,
@@ -88,6 +126,10 @@
 				7132C54814E753040009F1CB /* Supporting Files */,
 				7132C56214E75D5E0009F1CB /* SearchResult.h */,
 				7132C56314E75D5E0009F1CB /* SearchResult.m */,
+				7132C58514E761A40009F1CB /* SearchResultCell.xib */,
+				7132C58714E763850009F1CB /* SearchResultCell.h */,
+				7132C58814E763860009F1CB /* SearchResultCell.m */,
+				7132C58A14E766E10009F1CB /* NothingFoundCell.xib */,
 			);
 			path = StoreSearch;
 			sourceTree = "<group>";
@@ -101,6 +143,28 @@
 				7132C54F14E753040009F1CB /* StoreSearch-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7132C56614E7617D0009F1CB /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				7132C56714E7617D0009F1CB /* BarTexture.png */,
+				7132C56814E7617D0009F1CB /* BarTexture@2x.png */,
+				7132C56914E7617D0009F1CB /* CloseButton.png */,
+				7132C56A14E7617D0009F1CB /* CloseButton@2x.png */,
+				7132C56B14E7617D0009F1CB /* DetailPlaceholder.png */,
+				7132C56C14E7617D0009F1CB /* DetailPlaceholder@2x.png */,
+				7132C56D14E7617D0009F1CB /* LandscapeBackground.png */,
+				7132C56E14E7617D0009F1CB /* LandscapeButton.png */,
+				7132C56F14E7617D0009F1CB /* LandscapeButton@2x.png */,
+				7132C57014E7617D0009F1CB /* Placeholder.png */,
+				7132C57114E7617D0009F1CB /* Placeholder@2x.png */,
+				7132C57214E7617D0009F1CB /* SelectedTableCellGradient.png */,
+				7132C57314E7617D0009F1CB /* StoreButton.png */,
+				7132C57414E7617D0009F1CB /* StoreButton@2x.png */,
+				7132C57514E7617D0009F1CB /* TableCellGradient.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +219,23 @@
 			files = (
 				7132C54C14E753040009F1CB /* InfoPlist.strings in Resources */,
 				7132C55814E753050009F1CB /* SearchViewController.xib in Resources */,
+				7132C57614E7617D0009F1CB /* BarTexture.png in Resources */,
+				7132C57714E7617D0009F1CB /* BarTexture@2x.png in Resources */,
+				7132C57814E7617D0009F1CB /* CloseButton.png in Resources */,
+				7132C57914E7617D0009F1CB /* CloseButton@2x.png in Resources */,
+				7132C57A14E7617D0009F1CB /* DetailPlaceholder.png in Resources */,
+				7132C57B14E7617D0009F1CB /* DetailPlaceholder@2x.png in Resources */,
+				7132C57C14E7617D0009F1CB /* LandscapeBackground.png in Resources */,
+				7132C57D14E7617D0009F1CB /* LandscapeButton.png in Resources */,
+				7132C57E14E7617D0009F1CB /* LandscapeButton@2x.png in Resources */,
+				7132C57F14E7617D0009F1CB /* Placeholder.png in Resources */,
+				7132C58014E7617D0009F1CB /* Placeholder@2x.png in Resources */,
+				7132C58114E7617D0009F1CB /* SelectedTableCellGradient.png in Resources */,
+				7132C58214E7617D0009F1CB /* StoreButton.png in Resources */,
+				7132C58314E7617D0009F1CB /* StoreButton@2x.png in Resources */,
+				7132C58414E7617D0009F1CB /* TableCellGradient.png in Resources */,
+				7132C58614E761A40009F1CB /* SearchResultCell.xib in Resources */,
+				7132C58B14E766E10009F1CB /* NothingFoundCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +250,7 @@
 				7132C55214E753050009F1CB /* AppDelegate.m in Sources */,
 				7132C55514E753050009F1CB /* SearchViewController.m in Sources */,
 				7132C56414E75D5E0009F1CB /* SearchResult.m in Sources */,
+				7132C58914E763860009F1CB /* SearchResultCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
