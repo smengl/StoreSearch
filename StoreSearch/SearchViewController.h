@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface SearchViewController : UIViewController
-
+<UITableViewDelegate, UITableViewDelegate, UISearchBarDelegate>
 @end
