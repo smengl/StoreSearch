@@ -41,6 +41,7 @@
 		7132C59814E7698A0009F1CB /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7132C59114E7698A0009F1CB /* Icon.png */; };
 		7132C59914E7698A0009F1CB /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7132C59214E7698A0009F1CB /* Icon@2x.png */; };
 		7132C59A14E7698A0009F1CB /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 7132C59314E7698A0009F1CB /* iTunesArtwork */; };
+		7132C59C14E7780C0009F1CB /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7132C59B14E7780C0009F1CB /* LoadingCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +86,7 @@
 		7132C59114E7698A0009F1CB /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		7132C59214E7698A0009F1CB /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		7132C59314E7698A0009F1CB /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
+		7132C59B14E7780C0009F1CB /* LoadingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 				7132C58714E763850009F1CB /* SearchResultCell.h */,
 				7132C58814E763860009F1CB /* SearchResultCell.m */,
 				7132C58A14E766E10009F1CB /* NothingFoundCell.xib */,
+				7132C59B14E7780C0009F1CB /* LoadingCell.xib */,
 			);
 			path = StoreSearch;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				7132C59814E7698A0009F1CB /* Icon.png in Resources */,
 				7132C59914E7698A0009F1CB /* Icon@2x.png in Resources */,
 				7132C59A14E7698A0009F1CB /* iTunesArtwork in Resources */,
+				7132C59C14E7780C0009F1CB /* LoadingCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
