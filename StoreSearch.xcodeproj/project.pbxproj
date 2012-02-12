@@ -54,6 +54,7 @@
 		7132C5BD14E77D490009F1CB /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 7132C5B314E77D490009F1CB /* UIImageView+AFNetworking.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		7132C5C114E787CF0009F1CB /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7132C5BF14E787CF0009F1CB /* Default.png */; };
 		7132C5C214E787CF0009F1CB /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7132C5C014E787CF0009F1CB /* Default@2x.png */; };
+		714D273F14E7BC4100754CCF /* GradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 714D273E14E7BC4100754CCF /* GradientView.m */; };
 		71EC8C7214E78CF100207B15 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71EC8C7014E78CF100207B15 /* DetailViewController.m */; };
 		71EC8C7314E78CF100207B15 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71EC8C7114E78CF100207B15 /* DetailViewController.xib */; };
 /* End PBXBuildFile section */
@@ -125,6 +126,8 @@
 		7132C5B314E77D490009F1CB /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		7132C5BF14E787CF0009F1CB /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		7132C5C014E787CF0009F1CB /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		714D273D14E7BC4100754CCF /* GradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientView.h; sourceTree = "<group>"; };
+		714D273E14E7BC4100754CCF /* GradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientView.m; sourceTree = "<group>"; };
 		71EC8C6F14E78CF100207B15 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		71EC8C7014E78CF100207B15 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		71EC8C7114E78CF100207B15 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
@@ -194,6 +197,8 @@
 				71EC8C6F14E78CF100207B15 /* DetailViewController.h */,
 				71EC8C7014E78CF100207B15 /* DetailViewController.m */,
 				71EC8C7114E78CF100207B15 /* DetailViewController.xib */,
+				714D273D14E7BC4100754CCF /* GradientView.h */,
+				714D273E14E7BC4100754CCF /* GradientView.m */,
 			);
 			path = StoreSearch;
 			sourceTree = "<group>";
@@ -389,6 +394,7 @@
 				7132C5BC14E77D490009F1CB /* AFXMLRequestOperation.m in Sources */,
 				7132C5BD14E77D490009F1CB /* UIImageView+AFNetworking.m in Sources */,
 				71EC8C7214E78CF100207B15 /* DetailViewController.m in Sources */,
+				714D273F14E7BC4100754CCF /* GradientView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
