@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LandscapeViewController : UIViewController
+@interface LandscapeViewController : UIViewController <UIScrollViewDelegate>
 
+@property (nonatomic, strong) NSArray *searchResults;
 @end
