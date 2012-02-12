@@ -15,8 +15,14 @@
 @synthesize window = _window;
 @synthesize viewController = _viewController;
 
+- (void)customizeAppearance
+{
+    UIImage *barImage = [UIImage imageNamed:@"BarTexture"];
+    [[UISearchBar appearance] setBackgroundImage:barImage];
+}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [self customizeAppearance];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.viewController = [[SearchViewController alloc] initWithNibName:@"SearchViewController" bundle:nil];
