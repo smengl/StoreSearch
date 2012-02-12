@@ -58,6 +58,7 @@
 		714D274214E7C1A400754CCF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 714D274114E7C1A400754CCF /* QuartzCore.framework */; };
 		714D274614E7CC1700754CCF /* LandscapeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 714D274414E7CC1700754CCF /* LandscapeViewController.m */; };
 		714D274714E7CC1700754CCF /* LandscapeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 714D274514E7CC1700754CCF /* LandscapeViewController.xib */; };
+		714D274A14E7DFEF00754CCF /* Search.m in Sources */ = {isa = PBXBuildFile; fileRef = 714D274914E7DFEF00754CCF /* Search.m */; };
 		71EC8C7214E78CF100207B15 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71EC8C7014E78CF100207B15 /* DetailViewController.m */; };
 		71EC8C7314E78CF100207B15 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71EC8C7114E78CF100207B15 /* DetailViewController.xib */; };
 /* End PBXBuildFile section */
@@ -135,6 +136,8 @@
 		714D274314E7CC1600754CCF /* LandscapeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandscapeViewController.h; sourceTree = "<group>"; };
 		714D274414E7CC1700754CCF /* LandscapeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandscapeViewController.m; sourceTree = "<group>"; };
 		714D274514E7CC1700754CCF /* LandscapeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LandscapeViewController.xib; sourceTree = "<group>"; };
+		714D274814E7DFEE00754CCF /* Search.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Search.h; sourceTree = "<group>"; };
+		714D274914E7DFEF00754CCF /* Search.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Search.m; sourceTree = "<group>"; };
 		71EC8C6F14E78CF100207B15 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		71EC8C7014E78CF100207B15 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		71EC8C7114E78CF100207B15 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
@@ -211,6 +214,8 @@
 				714D274314E7CC1600754CCF /* LandscapeViewController.h */,
 				714D274414E7CC1700754CCF /* LandscapeViewController.m */,
 				714D274514E7CC1700754CCF /* LandscapeViewController.xib */,
+				714D274814E7DFEE00754CCF /* Search.h */,
+				714D274914E7DFEF00754CCF /* Search.m */,
 			);
 			path = StoreSearch;
 			sourceTree = "<group>";
@@ -409,6 +414,7 @@
 				71EC8C7214E78CF100207B15 /* DetailViewController.m in Sources */,
 				714D273F14E7BC4100754CCF /* GradientView.m in Sources */,
 				714D274614E7CC1700754CCF /* LandscapeViewController.m in Sources */,
+				714D274A14E7DFEF00754CCF /* Search.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
