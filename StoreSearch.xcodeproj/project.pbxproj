@@ -54,6 +54,8 @@
 		7132C5BD14E77D490009F1CB /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 7132C5B314E77D490009F1CB /* UIImageView+AFNetworking.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		7132C5C114E787CF0009F1CB /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7132C5BF14E787CF0009F1CB /* Default.png */; };
 		7132C5C214E787CF0009F1CB /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7132C5C014E787CF0009F1CB /* Default@2x.png */; };
+		71EC8C7214E78CF100207B15 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71EC8C7014E78CF100207B15 /* DetailViewController.m */; };
+		71EC8C7314E78CF100207B15 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71EC8C7114E78CF100207B15 /* DetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -123,6 +125,9 @@
 		7132C5B314E77D490009F1CB /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		7132C5BF14E787CF0009F1CB /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		7132C5C014E787CF0009F1CB /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		71EC8C6F14E78CF100207B15 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		71EC8C7014E78CF100207B15 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		71EC8C7114E78CF100207B15 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +191,9 @@
 				7132C58814E763860009F1CB /* SearchResultCell.m */,
 				7132C58A14E766E10009F1CB /* NothingFoundCell.xib */,
 				7132C59B14E7780C0009F1CB /* LoadingCell.xib */,
+				71EC8C6F14E78CF100207B15 /* DetailViewController.h */,
+				71EC8C7014E78CF100207B15 /* DetailViewController.m */,
+				71EC8C7114E78CF100207B15 /* DetailViewController.xib */,
 			);
 			path = StoreSearch;
 			sourceTree = "<group>";
@@ -354,6 +362,7 @@
 				7132C59C14E7780C0009F1CB /* LoadingCell.xib in Resources */,
 				7132C5C114E787CF0009F1CB /* Default.png in Resources */,
 				7132C5C214E787CF0009F1CB /* Default@2x.png in Resources */,
+				71EC8C7314E78CF100207B15 /* DetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +388,7 @@
 				7132C5BB14E77D490009F1CB /* AFURLConnectionOperation.m in Sources */,
 				7132C5BC14E77D490009F1CB /* AFXMLRequestOperation.m in Sources */,
 				7132C5BD14E77D490009F1CB /* UIImageView+AFNetworking.m in Sources */,
+				71EC8C7214E78CF100207B15 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
