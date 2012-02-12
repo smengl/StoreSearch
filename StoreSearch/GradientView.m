@@ -10,6 +10,9 @@
 
 @implementation GradientView
 
+- (void) dealloc{
+    NSLog(@"dealloc %@", self);
+}
 - (id)initWithFrame:(CGRect)frame
 {
     if ((self = [super initWithFrame:frame])) {

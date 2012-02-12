@@ -55,6 +55,7 @@
 		7132C5C114E787CF0009F1CB /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7132C5BF14E787CF0009F1CB /* Default.png */; };
 		7132C5C214E787CF0009F1CB /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7132C5C014E787CF0009F1CB /* Default@2x.png */; };
 		714D273F14E7BC4100754CCF /* GradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 714D273E14E7BC4100754CCF /* GradientView.m */; };
+		714D274214E7C1A400754CCF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 714D274114E7C1A400754CCF /* QuartzCore.framework */; };
 		71EC8C7214E78CF100207B15 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71EC8C7014E78CF100207B15 /* DetailViewController.m */; };
 		71EC8C7314E78CF100207B15 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71EC8C7114E78CF100207B15 /* DetailViewController.xib */; };
 /* End PBXBuildFile section */
@@ -128,6 +129,7 @@
 		7132C5C014E787CF0009F1CB /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		714D273D14E7BC4100754CCF /* GradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientView.h; sourceTree = "<group>"; };
 		714D273E14E7BC4100754CCF /* GradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientView.m; sourceTree = "<group>"; };
+		714D274114E7C1A400754CCF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		71EC8C6F14E78CF100207B15 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		71EC8C7014E78CF100207B15 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		71EC8C7114E78CF100207B15 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				714D274214E7C1A400754CCF /* QuartzCore.framework in Frameworks */,
 				7132C54214E753040009F1CB /* UIKit.framework in Frameworks */,
 				7132C54414E753040009F1CB /* Foundation.framework in Frameworks */,
 				7132C54614E753040009F1CB /* CoreGraphics.framework in Frameworks */,
@@ -150,6 +153,7 @@
 		7132C53214E753040009F1CB = {
 			isa = PBXGroup;
 			children = (
+				714D274114E7C1A400754CCF /* QuartzCore.framework */,
 				7132C54714E753040009F1CB /* StoreSearch */,
 				7132C54014E753040009F1CB /* Frameworks */,
 				7132C53E14E753040009F1CB /* Products */,

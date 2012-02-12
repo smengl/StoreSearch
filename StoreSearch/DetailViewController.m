@@ -10,7 +10,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "SearchResult.h"
 #import "UIImageView+AFNetworking.h"
-
+#import "GradientView.h"
 
 @interface DetailViewController ()
 @property (nonatomic, weak) IBOutlet UIImageView *artworkImageView;
@@ -25,7 +25,9 @@
 - (IBAction)openInStore:(id)sender;
 
 @end
-@implementation DetailViewController
+@implementation DetailViewController{
+    GradientView *gradientView;
+}
 @synthesize artworkImageView = _artworkImageView;
 @synthesize nameLabel = _nameLabel;
 @synthesize artistNameLabel = _artistNameLabel;
@@ -39,11 +41,74 @@
 -(void) dealloc{
     [self.artworkImageView cancelImageRequestOperation];
 }
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
+{
+    [self didMoveToParentViewController:self.parentViewController];
+}
+- (void)presentInParentViewController:(UIViewController *)parentViewController
+{
+    gradientView = [[GradientView alloc] initWithFrame:parentViewController.view.bounds];
+    [parentViewController.view addSubview:gradientView];
+    [parentViewController.view addSubview:self.view];
+    [parentViewController addChildViewController:self];
+    
+    CAKeyframeAnimation *bounceAnimation = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale"];
+    
+    bounceAnimation.duration = 0.4;
+    bounceAnimation.delegate = self;
+    
+    bounceAnimation.values = [NSArray arrayWithObjects:
+                              [NSNumber numberWithFloat:0.7f],
+                              [NSNumber numberWithFloat:1.2f],
+                              [NSNumber numberWithFloat:0.9f],
+                              [NSNumber numberWithFloat:1.0f],
+                              nil];
+    
+    bounceAnimation.keyTimes = [NSArray arrayWithObjects:
+                                [NSNumber numberWithFloat:0.0f],
+                                [NSNumber numberWithFloat:0.334f],
+                                [NSNumber numberWithFloat:0.666f],
+                                [NSNumber numberWithFloat:1.0f],
+                                nil];
+    
+    bounceAnimation.timingFunctions = [NSArray arrayWithObjects:
+                                       [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut],
+                                       [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut],
+                                       [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut],
+                                       nil];
+    
+    [self.view.layer addAnimation:bounceAnimation forKey:@"bounceAnimation"];
+    
+    CABasicAnimation *fadeAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
+    fadeAnimation.fromValue = [NSNumber numberWithFloat:0.0f];
+    fadeAnimation.toValue = [NSNumber numberWithFloat:1.0f];
+    fadeAnimation.duration = 0.1;
+    [gradientView.layer addAnimation:fadeAnimation forKey:@"fadeAnimation"];
+
+}
+
 - (IBAction)close:(id)sender
 {
+    [self dismissFromParentViewController];
+}
+
+- (void)dismissFromParentViewController
+{
     [self willMoveToParentViewController:nil];
-    [self.view removeFromSuperview];
-    [self removeFromParentViewController];
+    
+    [UIView animateWithDuration:0.4 animations:^
+     {
+         CGRect rect = self.view.bounds;
+         rect.origin.y += rect.size.height;
+         self.view.frame = rect;
+         gradientView.alpha = 0.0f;
+     }
+                     completion:^(BOOL finished)
+     {
+         [self.view removeFromSuperview];
+         [gradientView removeFromSuperview];
+         [self removeFromParentViewController];
+     }];
 }
 - (IBAction)openInStore:(id)sender
 {
