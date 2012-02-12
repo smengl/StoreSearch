@@ -10,6 +10,7 @@
 #import "SearchResult.h"
 #import "SearchResultCell.h"
 #import "AFJSONRequestOperation.h"
+#import "AFImageCache.h"
 
 
 static NSString *const SearchResultCellIdentifier = @"SearchResultCell";
@@ -217,6 +218,8 @@ static NSString *const LoadingCellIdentifier = @"LoadingCell";
     if ([self.searchBar.text length] > 0) {
         [self.searchBar resignFirstResponder];
         [queue cancelAllOperations];
+        [[AFImageCache sharedImageCache] removeAllObjects];
+        [[NSURLCache sharedURLCache] removeAllCachedResponses];
         isLoading = YES;
         [self.tableView reloadData];
         
@@ -266,32 +269,6 @@ static NSString *const LoadingCellIdentifier = @"LoadingCell";
         return [searchResults count] ;
     }
 }
-- (NSString *)kindForDisplay:(NSString *)kind
-{
-    if ([kind isEqualToString:@"album"]) {
-        return @"Album";
-    } else if ([kind isEqualToString:@"audiobook"]) {
-        return @"Audio Book";
-    } else if ([kind isEqualToString:@"book"]) {
-        return @"Book";
-    } else if ([kind isEqualToString:@"ebook"]) {
-        return @"E-Book";
-    } else if ([kind isEqualToString:@"feature-movie"]) {
-        return @"Movie";
-    } else if ([kind isEqualToString:@"music-video"]) {
-        return @"Music Video";
-    } else if ([kind isEqualToString:@"podcast"]) {
-        return @"Podcast";
-    } else if ([kind isEqualToString:@"software"]) {
-        return @"App";
-    } else if ([kind isEqualToString:@"song"]) {
-        return @"Song";
-    } else if ([kind isEqualToString:@"tv-episode"]) {
-        return @"TV Episode";
-    } else {
-        return kind;
-    }
-}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 { 
     if (isLoading){
@@ -302,14 +279,7 @@ static NSString *const LoadingCellIdentifier = @"LoadingCell";
         SearchResultCell *cell = (SearchResultCell *)[tableView dequeueReusableCellWithIdentifier:SearchResultCellIdentifier];
         
         SearchResult *searchResult = [searchResults objectAtIndex:indexPath.row];
-        cell.nameLabel.text = searchResult.name;
-        NSString *artistName = searchResult.artistname;
-        if (artistName == nil) {
-            artistName = @"Unknown";
-        }
-        
-        NSString *kind = [self kindForDisplay:searchResult.kind];
-        cell.artistNameLabel.text = [NSString stringWithFormat:@"%@ (%@)", artistName, kind];
+        [cell configureForSearchResult:searchResult];
         
         return cell;
     }
