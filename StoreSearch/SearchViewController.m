@@ -291,7 +291,8 @@ static NSString *const LoadingCellIdentifier = @"LoadingCell";
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     DetailViewController *controller = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
-    
+    SearchResult *searchResult = [searchResults objectAtIndex:indexPath.row];
+    controller.searchResult = searchResult;
     [self.view addSubview:controller.view];
     [self addChildViewController:controller];
     [controller didMoveToParentViewController:self];

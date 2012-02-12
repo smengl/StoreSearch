@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class SearchResult;
 @interface DetailViewController : UIViewController
+@property (nonatomic, strong) SearchResult *searchResult;
 
 @end
