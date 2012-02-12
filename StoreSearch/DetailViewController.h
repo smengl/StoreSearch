@@ -9,7 +9,11 @@
 #import <UIKit/UIKit.h>
 @class SearchResult;
 @interface DetailViewController : UIViewController
+typedef enum {
+    DetailViewControllerAnimationTypeSlide,
+    DetailViewControllerAnimationTypeFade
+} DetailViewControllerAnimationType;
 @property (nonatomic, strong) SearchResult *searchResult;
 - (void)presentInParentViewController:(UIViewController *)parentViewController;
-- (void)dismissFromParentViewController;
+- (void)dismissFromParentViewControllerWithAnimationType:(DetailViewControllerAnimationType)animationType;
 @end

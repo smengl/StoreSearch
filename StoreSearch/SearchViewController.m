@@ -12,6 +12,8 @@
 #import "AFJSONRequestOperation.h"
 #import "AFImageCache.h"
 #import "DetailViewController.h"
+#import "LandscapeViewController.h"
+
 
 static NSString *const SearchResultCellIdentifier = @"SearchResultCell";
 static NSString *const NothingFoundCellIdentifier = @"NothingFoundCell";
@@ -29,6 +31,10 @@ static NSString *const LoadingCellIdentifier = @"LoadingCell";
     NSMutableArray *searchResults;
     BOOL isLoading;
     NSOperationQueue *queue;
+    LandscapeViewController *landscapeViewController;
+    __weak DetailViewController *detailViewController;
+
+
 
 }
 
@@ -295,6 +301,7 @@ static NSString *const LoadingCellIdentifier = @"LoadingCell";
     SearchResult *searchResult = [searchResults objectAtIndex:indexPath.row];
     controller.searchResult = searchResult;
     [controller presentInParentViewController:self];
+    detailViewController = controller;
 }
 
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -303,6 +310,55 @@ static NSString *const LoadingCellIdentifier = @"LoadingCell";
         return nil;
     } else {
         return indexPath;
+    }
+}
+- (void)showLandscapeViewWithDuration:(NSTimeInterval)duration
+{
+    if (landscapeViewController == nil) {
+        [self.searchBar resignFirstResponder];
+        
+        landscapeViewController = [[LandscapeViewController alloc] initWithNibName:@"LandscapeViewController" bundle:nil];
+        
+        landscapeViewController.view.frame = self.view.bounds;
+        landscapeViewController.view.alpha = 0.0f;
+        
+        [self.view addSubview:landscapeViewController.view];
+        [self addChildViewController:landscapeViewController];
+        
+        [UIView animateWithDuration:duration animations:^{
+            landscapeViewController.view.alpha = 1.0f;
+        } completion:^(BOOL finished) {
+            [landscapeViewController didMoveToParentViewController:self];
+        }];
+        
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque animated:YES];
+        [detailViewController dismissFromParentViewControllerWithAnimationType:DetailViewControllerAnimationTypeFade];
+    }
+}
+- (void)hideLandscapeViewWithDuration:(NSTimeInterval)duration
+{
+    if (landscapeViewController != nil) {
+        [landscapeViewController willMoveToParentViewController:nil];
+        
+        [UIView animateWithDuration:duration animations:^{
+            landscapeViewController.view.alpha = 0.0f;
+        } completion:^(BOOL finished) {
+            [landscapeViewController.view removeFromSuperview];
+            [landscapeViewController removeFromParentViewController];
+            landscapeViewController = nil;
+        }];
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault animated:YES];
+
+    }
+}
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
+    
+    if (UIInterfaceOrientationIsPortrait(toInterfaceOrientation)) {
+        [self hideLandscapeViewWithDuration:duration];
+    } else {
+        [self showLandscapeViewWithDuration:duration];
     }
 }
 @end
