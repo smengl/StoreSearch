@@ -2,7 +2,7 @@
 //  ViewController.m
 //  StoreSearch
 //
-//  Created by Seak Meng Lay on 2/11/12.
+//  Created by Seak Meng Lay on 2012.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
